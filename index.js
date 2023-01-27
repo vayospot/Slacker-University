@@ -119,7 +119,7 @@ createObserver("#degrees", {
   func: () =>
     degreesSlideElems.forEach((each) => each.classList.add("animate")),
   observeOnce: true,
-  thresholdValue: 0.4, //change back to 0.3 after testing
+  thresholdValue: 0.3,
 });
 createObserver("#events", {
   func: () => eventsSlideElems.forEach((each) => each.classList.add("animate")),
@@ -261,12 +261,6 @@ function typeLetter() {
         4000
       );
     }
-  });
-
-  createObserver("#events", {
-    func: () => typed.stop(),
-    observeOnce: true,
-    thresholdValue: 0.3,
   });
 }
 
